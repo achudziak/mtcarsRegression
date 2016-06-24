@@ -1,0 +1,35 @@
+mtcarsRegression
+========================================================
+author: Adam Chudziak
+date: 24.06.2016
+autosize: true
+
+Summary
+========================================================
+
+This presentation is a part of a course project for Coursera Developing Data products course.
+It describes the accompanying shiny application.
+
+You can find the application here: <http://achudziak.shinyapps.io/mtcarsRegression/>.
+
+GitHub page for the project can be found here: <https://github.com/achudziak/mtcarsRegression>
+
+Application
+========================================================
+
+The application computes prognosed time for a car for 1/4 mile based on given horsepower and weight. We use a simple linear regression model based on built-in R mtcars dataset.
+
+Data
+========================================================
+
+Data comes from mtcars dataset
+
+```{r}
+data("mtcars")
+summary(mtcars)
+```
+
+Model
+========================================================
+
+We use a linear regression model with two regressors: weight and horsepower

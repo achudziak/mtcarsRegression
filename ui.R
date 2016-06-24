@@ -22,11 +22,17 @@ shinyUI(fluidPage(
 
     # Show a plot of the generated distribution
     mainPanel(
-      p("The application computes prgnosed time for a car for 1/4 mile based on given 
-        horsepower and weight. We use a simple linear regression model based on mtcars dataset.
-        Choose weight and horsepower to obtain prediction."),
-      h3("predicted time for 1/4 mile"),
-      verbatimTextOutput("qsecEst")
+      tabsetPanel(
+        tabPanel("prediction",
+                  h3("predicted time for 1/4 mile"),
+                  verbatimTextOutput("qsecEst")
+        ),
+        tabPanel("Documentation",
+                 p("The application computes prgnosed time for a car for 1/4 mile based on given 
+                   horsepower and weight. We use a simple linear regression model based on built-in R mtcars dataset."),
+                 p("Choose weight and horsepower to obtain prediction.")
+                )
+      )
     )
   )
 ))
